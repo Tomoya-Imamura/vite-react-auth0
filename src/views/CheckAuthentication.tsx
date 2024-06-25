@@ -14,13 +14,14 @@ const CheckAuthentication: React.FC = () => {
 
         const config = getConfig();
         const domain = config.domain
-        const clientId = "BrBEwKyWSThXDl0GOtc8gXE358co05pn";
-        const clientSecret = "4_qmaslwjlax6SFdodyth5LKE0pR4pWoHSxOYaC4HFOygMJQd9V0SoLBdExYyTA0";
+        const clientId = "";
+        const clientSecret = "";
 
 
         try {
             const response = await axios.post(`https://${domain}/oauth/token`, {
                 grant_type: 'password',
+                "connection": "TOHOGAS",
                 username: username,
                 password: password,
                 scope: 'openid profile email',

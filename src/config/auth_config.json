@@ -1,6 +1,6 @@
 {
-  "domain": "dev-ahsivo00r84wgtro.jp.auth0.com",
-  "clientId": "zV6Fh0RARmGNmTamWKQKCJEpliRxmOBP",
-  "db": "TOHOGAS",
-  "audience": "https://dev-ahsivo00r84wgtro.jp.auth0.com/api/v2/"
+  "domain": "imatomotestaaa.jp.auth0.com",
+  "clientId": "bfqqhSBb9U8yTUUZD0wmokCGFgeJyAIV",
+  "db": "TOHOGASDB",
+  "audience": "https://imatomotestaaa.jp.auth0.com/api/v2/"
 }

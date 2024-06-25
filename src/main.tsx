@@ -13,10 +13,10 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <ChakraProvider>
       <Auth0Provider
-        domain = {config.domain}
-        clientId= {config.clientId}
+        domain={config.domain}
+        clientId={config.clientId}
         authorizationParams={{ redirect_uri: window.location.origin }}>
-          <Navbar/>
+        <Navbar />
         <App />
       </Auth0Provider>
     </ChakraProvider>
