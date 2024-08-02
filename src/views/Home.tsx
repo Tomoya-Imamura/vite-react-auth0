@@ -3,13 +3,13 @@ import '../App.css'
 import LoginButton from '../component/LoginButton'
 import LogoutButton from '../component/LogoutButton'
 import { useAuth0, withAuthenticationRequired } from '@auth0/auth0-react';
-import { Button } from '@chakra-ui/react'
+import { Button, Box, Text, Heading, Container } from '@chakra-ui/react'
 import { FC } from "react";
 
 export const Home: FC = () => {
   const [count, setCount] = useState(0)
   const { user, isAuthenticated, isLoading } = useAuth0();
-
+  console.log(user)
   return (
     <>
 
@@ -31,8 +31,19 @@ export const Home: FC = () => {
       {isAuthenticated && (
         <div>
           <LogoutButton />
-          <h2>ユーザ名：{user?.name}</h2>
+          <h2>ユーザ名：{user?.username}</h2>
           <p>email:{user?.email}</p>
+          <Container maxW="container.lg" py={6}>
+            <Box borderWidth="1px" borderRadius="md" bg="gray.50">
+              <Heading as="h3" size="md">デコード結果</Heading>
+
+              <Text isTruncated align={'left'} mt={8}>
+
+                <pre>{JSON.stringify(user, null, 2)}</pre>
+
+              </Text>
+            </Box>
+          </Container>
         </div>
       )}
     </>

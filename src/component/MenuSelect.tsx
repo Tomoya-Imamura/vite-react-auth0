@@ -11,9 +11,9 @@ const MenuSelect = () => {
             </MenuButton>
             <MenuList>
                 <MenuItem as='a' href='/'>Home</MenuItem>
-                <MenuItem as='a' href='update'>パスワード変更</MenuItem>
-                <MenuItem as='a' href='listUsers'>ユーザリスト</MenuItem>
-                <MenuItem as='a' href='checkAuthentication'> 認証API</MenuItem>
+                <MenuItem as='a' href='/update'>パスワード変更</MenuItem>
+                <MenuItem as='a' href='/listUsers'>ユーザリスト</MenuItem>
+                <MenuItem as='a' href='/checkAuthentication'> 認証API</MenuItem>
                 <MenuItem onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
                     Logout</MenuItem>
 
